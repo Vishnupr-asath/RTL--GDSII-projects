@@ -1,0 +1,22 @@
+{
+  "DESIGN_NAME": "fulladder",
+  "VERILOG_FILES": "dir::rtl/full_adder.sv",
+
+  "DESIGN_IS_CORE": false,
+
+  "CLOCK_PORT": "",
+  "CLOCK_PERIOD": 10,
+
+  "FP_SIZING": "absolute",
+  "DIE_AREA": "0 0 80 80",
+  "CORE_AREA": "5 5 75 75",
+
+  "PL_TARGET_DENSITY": 0.3,
+
+  "pdk::sky130*": {
+    "FP_CORE_UTIL": 10,
+    "scl::sky130_fd_sc_hd": {
+      "RT_MAX_LAYER": "met4"
+    }
+  }
+}
