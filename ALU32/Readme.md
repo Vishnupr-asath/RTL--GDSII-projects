@@ -1,10 +1,30 @@
+# Repot
+Synthesis & Pre-Layout Timing Analysis
+
+The RTL design was synthesized using Yosys with area optimization enabled and mapped to the Sky130 HD standard cell library.
+Pre-synthesis and post-synthesis statistics were analyzed to understand logic optimization and cell utilization.
+Static timing analysis was performed at the synthesis stage to estimate critical paths before physical implementation.
+
+The following reports are included in this repository for reference:
+
+```
+1-synthesis_pre.stat – Logic statistics before synthesis optimization
+
+1-synthesis.AREA_0.stat.rpt – Post-synthesis cell count and area breakdown
+
+2-syn_sta.summary.rpt – Summary of synthesis-stage timing analysis
+
+2-syn_sta.max.rpt – Detailed critical path timing information
+```
+These reports indicate that the design is heavily combinational with a long arithmetic critical path, which is expected for an unpipelined 32-bit ALU.
+
 # OpenLane Flow Summary — 32-bit ALU
 
 General Information
 | Parameter             | Value            |
 | --------------------- | ---------------- |
 | Design Name           | `alu32`          |
-| Flow Status           | ✅ Flow Completed |
+| Flow Status           | Flow Completed |
 | Total Runtime         | 5 min 29 sec     |
 | Routed Runtime        | 4 min 10 sec     |
 | Standard Cell Library | sky130_fd_sc_hd  |
