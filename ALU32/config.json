@@ -1,0 +1,25 @@
+{
+  "DESIGN_NAME": "alu32",
+  "VERILOG_FILES": "dir::rtl/alu32.v",
+
+  "CLOCK_PORT": "",
+  "CLOCK_PERIOD": 50,
+
+  "FP_SIZING": "absolute",
+  "DIE_AREA": "0 0 400 400",
+  "CORE_AREA": "20 20 380 380",
+
+  "PL_TARGET_DENSITY": 0.30,
+
+  "FP_PDN_VPITCH": 40,
+  "FP_PDN_HPITCH": 40,
+  "FP_PDN_VOFFSET": 10,
+  "FP_PDN_HOFFSET": 10,
+
+  "pdk::sky130*": {
+    "FP_CORE_UTIL": 25,
+    "scl::sky130_fd_sc_hd": {
+      "RT_MAX_LAYER": "met4"
+    }
+  }
+}
