@@ -1,4 +1,4 @@
-# Repot
+# Report
 Synthesis & Pre-Layout Timing Analysis
 
 The RTL design was synthesized using Yosys with area optimization enabled and mapped to the Sky130 HD standard cell library.
