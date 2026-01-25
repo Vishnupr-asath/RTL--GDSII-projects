@@ -1,3 +1,20 @@
+# 32-bit Arithmetic Logic Unit (ALU32)
+🔹 Introduction
+
+This project presents the design and physical implementation of a 32-bit Arithmetic Logic Unit (ALU), developed using a complete RTL-to-GDSII ASIC design flow. An ALU is a fundamental building block in digital processors, responsible for performing arithmetic and logical operations on binary data. The ALU32 designed in this project operates on two 32-bit operands and produces a 32-bit result based on a selected operation.
+
+The ALU supports a range of arithmetic and logical functions such as addition, subtraction, bitwise AND, OR, XOR, and comparison-related operations. Operation selection is controlled using a dedicated control signal, which internally drives multiplexing logic to route the appropriate result to the output.
+
+🔹 Functional Operation
+
+At the RTL level, the ALU is implemented as a purely combinational circuit. Arithmetic operations are realized using ripple-carry–based addition and subtraction logic, while logical operations are implemented using bitwise gate structures. A multi-level multiplexer network is used to select the final output based on the operation control inputs. Since the design is unpipelined and contains no sequential elements, the output reflects changes in the input operands immediately, subject to the propagation delay of the logic.
+
+🔹 Design Flow Overview
+
+The ALU32 was described in Verilog HDL and synthesized using Yosys, where the design was optimized for area and mapped to the Sky130 HD standard cell library. The synthesized netlist was then taken through floorplanning, placement, clock-tree synthesis (dummy CTS for combinational design), routing, and signoff using the OpenLane open-source ASIC flow. Final physical verification steps, including DRC, LVS, and antenna checks, were completed successfully, resulting in a fabrication-ready GDSII layout.
+# GDSII of the ALU32
+<img width="1203" height="901" alt="image" src="https://github.com/user-attachments/assets/da82a69c-894b-419c-a139-1770e274c627" />
+
 # Report
 Synthesis & Pre-Layout Timing Analysis
 
